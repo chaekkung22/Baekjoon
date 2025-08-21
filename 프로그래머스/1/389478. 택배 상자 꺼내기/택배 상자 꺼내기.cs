@@ -8,7 +8,6 @@ public class Solution
         int maxLine = 0;
         int numLine = 0;
         
-        int maxIndex = 0;
         int numIndex = 0;
         
         
@@ -16,8 +15,6 @@ public class Solution
         maxLine = n % w == 0 ?  n / w : n / w + 1;
         
         numLine = num % w == 0 ? num / w : num / w + 1;
-        
-        maxIndex = maxLine % 2 == 0 ?  (w - 1) - (n - 1) % w : (n - 1) % w;
         
         numIndex = numLine % 2 == 0 ?  (w - 1) - (num - 1) % w : (num - 1) % w;
         
@@ -41,10 +38,6 @@ public class Solution
                 }
             }
 
-
-            
-        
-        
         return answer;
     }
 }
