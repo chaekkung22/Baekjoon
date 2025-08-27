@@ -9,13 +9,13 @@ class Program
         int max;
         Stack<int> stk = new Stack<int>();
         
-        string input =  Console.ReadLine()!;
+        string input =  Console.ReadLine();
 
         int.TryParse(input, out max);
         
         for(int i = 0; i < max; i++)
         {
-            input = Console.ReadLine()!;
+            input = Console.ReadLine();
             int.TryParse(input, out num);
             
             if(num == 0)
