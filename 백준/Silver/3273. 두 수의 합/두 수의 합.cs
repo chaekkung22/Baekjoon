@@ -25,19 +25,28 @@ class Program
         input = Console.ReadLine();
         int.TryParse(input, out number);
         
-        for(int i = 0; i < count; i++)
+        Array.Sort(array);
+        
+        int left = 0;
+        int right = count - 1;
+        
+        while(left < right)
         {
-            int num1 = array[i];
+            int sum = array[left] + array[right];
             
-            for(int j = i + 1; j < count; j++)
+            if(sum == number)
             {
-                int num2 = array[j];
-                
-                if(num1 + num2 == number)
-                {
-                    answer++;
-                    break;
-                }
+                answer++;
+                left++;
+                right--;
+            }
+            else if(sum < number)
+            {
+                left++;
+            }
+            else if(sum > number)
+            {
+                right--;
             }
         }
         
